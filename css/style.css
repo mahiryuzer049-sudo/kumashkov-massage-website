@@ -63,3 +63,19 @@ body.hovering .cursor-circle { width: 60px; height: 60px; background: rgba(227, 
 .typing-dot:nth-child(1) { animation-delay: -0.32s; }
 .typing-dot:nth-child(2) { animation-delay: -0.16s; }
 @keyframes typing { 0%, 80%, 100% { transform: scale(0); opacity: 0.5; } 40% { transform: scale(1); opacity: 1; } }
+
+/* =========================
+   4. ANIMATION DELAY UTILITIES
+   ========================= */
+
+/* Animation Delays */
+.anim-delay-02 { animation-delay: 0.2s; }
+.anim-delay-04 { animation-delay: 0.4s; }
+.anim-delay-07 { animation-delay: 0.7s; }
+.anim-delay-1 { animation-delay: 1s; }
+.anim-delay-15 { animation-delay: 1.5s; }
+
+/* Transition Delays */
+.transition-delay-01 { transition-delay: 0.1s; }
+.transition-delay-02 { transition-delay: 0.2s; }
+.transition-delay-03 { transition-delay: 0.3s; }
