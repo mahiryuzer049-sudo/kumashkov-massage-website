@@ -1,0 +1,22 @@
+{
+  "name": "kumashkov-massage-website",
+  "version": "1.0.0",
+  "description": "Premium landing for professional massage therapist Pavel Kumashkov. Exclusive massage services in Moscow.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=8000 --open=index.html",
+    "dev": "npx live-server --port=8000 --open=index.html --watch=css,js"
+  },
+  "keywords": [
+    "massage",
+    "wellness",
+    "private-service",
+    "moscow"
+  ],
+  "author": "Pavel Kumashkov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahiryuzer049-sudo/kumashkov-massage-website.git"
+  }
+}
