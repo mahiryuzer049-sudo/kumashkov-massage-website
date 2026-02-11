@@ -18,6 +18,8 @@
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
     
@@ -244,15 +246,46 @@
         <div class="max-w-md mx-auto px-6 mb-20 text-center reveal-on-scroll"><h2 class="font-serif text-4xl text-ivory mb-4">Послушайте свое тело</h2><p class="text-[10px] font-sans text-gray-500 uppercase tracking-widest">Интерактивный диалог с ощущениями</p></div>
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="relative h-[650px] border border-white/5 bg-[#030303] rounded-sm flex items-center justify-center overflow-hidden reveal-on-scroll group" id="scanner-container">
+
                 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div><div class="absolute inset-0" style="background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div><div class="scan-line animate-scan"></div>
-                <svg viewBox="0 0 200 450" class="h-[90%] w-auto relative z-10 drop-shadow-2xl">
-                    <path class="body-path body-outline" d="M100,20 C115,20 125,35 120,50 C115,65 85,65 80,50 C75,35 85,20 100,20 Z" />
-                    <path class="body-path body-outline" d="M120,50 Q150,55 160,60 Q170,100 170,160 Q160,200 130,220" /><path class="body-path body-outline" d="M80,50 Q50,55 40,60 Q30,100 30,160 Q40,200 70,220" /><path class="body-path body-outline" d="M70,220 Q65,300 70,350 Q75,420 90,440" /><path class="body-path body-outline" d="M130,220 Q135,300 130,350 Q125,420 110,440" /><path class="body-path body-outline" d="M100,50 L100,220" stroke-dasharray="2,3" opacity="0.3" />
-                    <g class="active-point" onclick="showZoneInfo('head', this)" data-analytics="Scanner: Point Click - Head"><circle cx="100" cy="35" r="25" class="hit-area" /><circle cx="100" cy="35" r="3" /><circle cx="100" cy="35" r="8" class="pulse-ring" /></g>
+                    <svg viewBox="0 0 200 440" class="h-[90%] w-auto relative z-10 drop-shadow-2xl text-champagne-dark stroke-current">                    <path class="body-path body-outline" d="M100,20 C115,20 125,35 120,50 C115,65 85,65 80,50 C75,35 85,20 100,20 Z" />
+                        <path class="body-path body-outline" fill="none" stroke-width="2" d="M100,20 C115,20 125,35 120,50 C160,200 150,320 130,400 C115,430 100,435 100,435 C100,435 85,430 70,400 C50,320 40,200 80,50 C75,35 85,20 100,20 Z"/>                    <g class="active-point" onclick="showZoneInfo('head', this)" data-analytics="Scanner: Point Click - Head"><circle cx="100" cy="35" r="25" class="hit-area" /><circle cx="100" cy="35" r="3" /><circle cx="100" cy="35" r="8" class="pulse-ring" /></g>
                     <g class="active-point" onclick="showZoneInfo('neck', this)" data-analytics="Scanner: Point Click - Neck"><circle cx="100" cy="60" r="25" class="hit-area" /><circle cx="100" cy="60" r="3" /><circle cx="100" cy="60" r="12" class="pulse-ring" style="animation-delay: 0.5s" /></g>
                     <g class="active-point" onclick="showZoneInfo('shoulders', this)" data-analytics="Scanner: Point Click - Shoulders"><circle cx="100" cy="70" r="40" class="hit-area" /><circle cx="60" cy="70" r="3" /><circle cx="140" cy="70" r="3" /><circle cx="60" cy="70" r="10" class="pulse-ring" style="animation-delay: 1s" /></g>
                     <g class="active-point" onclick="showZoneInfo('back', this)" data-analytics="Scanner: Point Click - Back"><circle cx="100" cy="190" r="30" class="hit-area" /><circle cx="100" cy="190" r="3" /><circle cx="100" cy="190" r="15" class="pulse-ring" style="animation-delay: 0.2s" /></g>
-                    <g class="active-point" onclick="showZoneInfo('legs', this)" data-analytics="Scanner: Point Click - Legs"><circle cx="100" cy="350" r="50" class="hit-area" /><circle cx="80" cy="350" r="3" /><circle cx="120" cy="350" r="3" /><circle cx="80" cy="350" r="12" class="pulse-ring" style="animation-delay: 0.7s" /></g>
+                    <svg viewBox="0 0 200 440" class="h-[90%] w-auto relative z-10 drop-shadow-2xl">
+                        <defs>
+                            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#E3C9A0; stop-opacity:0.8"/>
+                                <stop offset="100%" style="stop-color:#E3C9A0; stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                        <path class="body-path body-outline" d="M100,20 C115,20 125,35 120,50 C160,200 150,320 130,400 C115,430 100,435 100,435 C100,435 85,430 70,400 C50,320 40,200 80,50 C75,35 85,20 100,20 Z"/>
+                        <path class="body-path body-outline" fill="none" stroke-width="2" d="M120,50 Q150,80 160,100 Q170,100 170,160 Q160,200 150,210"/>                        <path class="body-path body-outline" d="M80,50 Q50,80 40,100 Q30,100 30,160 Q40,200 50,210"/>
+                        <g class="active-point" onclick="showZoneInfo('head', this)" data-analytics="Scanner: Point Click - Head">
+                        <path class="body-path body-outline" fill="none" stroke-width="2" d="M80,50 Q50,80 40,100 Q30,100 30,160 Q40,200 50,210"/>                            <circle cx="100" cy="35" r="3" class="class="class="pulse-dot"""/>
+                        </g>
+                        <g class="active-point" onclick="showZoneInfo('neck', this)" data-analytics="Scanner: Point Click - Neck">
+                            <circle cx="100" cy="60" r="20" class="hit-area"/>
+                            <circle cx="100" cy="60" r="3" class="class="class="pulse-dot"""/>
+                        </g>
+                        <g class="active-point" onclick="showZoneInfo('shoulders', this)" data-analytics="Scanner: Point Click - Shoulders">
+                            <circle cx="70" cy="90" r="20" class="hit-area"/>
+                            <circle cx="70" cy="90" r="3" class="class="class="pulse-dot"""/>
+                            <circle cx="130" cy="90" r="20" class="hit-area"/>
+                            <circle cx="130" cy="90" r="3" class="class="class="pulse-dot"""/>
+                        </g>
+                        <g class="active-point" onclick="showZoneInfo('back', this)" data-analytics="Scanner: Point Click - Back">
+                            <circle cx="100" cy="150" r="35" class="hit-area"/>
+                            <circle cx="100" cy="150" r="3" class="class="class="pulse-dot"""/>
+                        </g>
+                        <g class="active-point" onclick="showZoneInfo('legs', this)" data-analytics="Scanner: Point Click - Legs">
+                            <circle cx="80" cy="350" r="30" class="hit-area"/>
+                            <circle cx="80" cy="350" r="3" class="class="class="pulse-dot"""/>
+                            <circle cx="120" cy="350" r="30" class="hit-area"/>
+                            <circle cx="120" cy="350" r="3" class="class="class="pulse-dot"""/>
+                        </g>
+                    </svg><g class="active-point" onclick="showZoneInfo('legs', this)" data-analytics="Scanner: Point Click - Legs"><circle cx="100" cy="350" r="50" class="hit-area" /><circle cx="80" cy="350" r="3" /><circle cx="120" cy="350" r="3" /><circle cx="80" cy="350" r="12" class="pulse-ring" style="animation-delay: 0.7s" /></g>
                 </svg>
                 <div id="zone-popup" class="absolute bottom-6 left-6 right-6 glass-panel p-8 translate-y-[120%] transition-transform duration-500 ease-out z-30 backdrop-blur-xl border border-champagne/10">
                     <div class="flex flex-col mb-4"><h3 id="zone-title" class="font-serif text-2xl text-champagne mb-1">...</h3><div class="flex items-center gap-2"><i class="fa-solid fa-staff-snake text-[8px] text-gray-500"></i><span id="zone-med" class="text-[9px] font-sans text-gray-500 uppercase tracking-widest border-b border-gray-700 pb-0.5">...</span></div></div>
