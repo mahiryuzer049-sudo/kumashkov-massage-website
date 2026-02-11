@@ -136,4 +136,45 @@ dist
 
 # Vite logs files
 vite.config.js.timestamp-*
+
+# ========================================
+# PROJECT-SPECIFIC ADDITIONS
+# ========================================
+
+# OS Files
+.DS_Store
+.DS_Store?
+Thumbs.db
+*.swp
+*.swo
+*~
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# Build artifacts
+dist/
+build/
+*.min.css
+*.min.js
+*.map
+.cache/
+
+# Environment
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Testing
+.nyc_output/
+
+# Temporary
+tmp/
+temp/
+.tmp/
 vite.config.ts.timestamp-*
