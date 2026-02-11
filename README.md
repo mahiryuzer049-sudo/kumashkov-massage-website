@@ -34,6 +34,12 @@ kumashkov-massage-website/
 │   ├── images/        # Изображения
 │   └── fonts/         # Шрифты (если нужны)
 ├── README.md          # Документация
+|-- js/
+    |-- main.js         # JavaScript: модули и логика
+|-- assets/
+    |-- images/         # Изображения
+    |-- svg/
+        |-- body-scanner.svg  # SVG сканера тела
 └── .gitignore         # Git ignore файл
 ```
 
